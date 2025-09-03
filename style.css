@@ -1,0 +1,140 @@
+@font-face {
+  font-family: "Karla";
+  src: url("assets/fonts/Karla-VariableFont_wght.ttf") format("truetype");
+  font-weight: 400 700;
+}
+
+:root {
+  --pale-green: hsl(148, 38%, 91%);
+  --green: hsl(169, 82%, 27%);
+  --red: hsl(0, 66%, 54%);
+  --white: hsl(0, 0%, 100%);
+  --light-teal: hsl(186, 15%, 59%);
+  --dark-teal: hsl(187, 24%, 22%);
+
+  --ff-base: "Karla", sans-serif;
+}
+
+@layer reset {
+  *,
+  ::before,
+  ::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    accent-color: var(--green);
+    font-size: 1rem;
+    font-family: var(--ff-base);
+    line-height: 1.6;
+    background-color: var(--pale-green);
+  }
+
+  h1,
+  h2,
+  p {
+    margin-block: 0;
+  }
+
+  input,
+  button,
+  textarea {
+    font: inherit;
+  }
+}
+
+@layer form {
+  .contact {
+    padding: 2rem;
+    background-color: var(--white);
+    border-radius: 1rem;
+    max-inline-size: 700px;
+    margin: 0 auto;
+  }
+
+  form {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .form-group {
+    display: grid;
+    gap: 0.25rem;
+  }
+
+  .form-group:has(:not([type="radio"])[required]) label,
+  fieldset:has([required]) legend {
+    display: flex;
+    gap: 1ch;
+
+    &::after {
+      content: "*";
+      color: var(--green);
+    }
+  }
+
+  .form-group:has([type="radio"], [type="checkbox"]) {
+    display: flex;
+    gap: 1ch;
+  }
+
+  .span-all {
+    grid-column: 1 / -1;
+  }
+
+  input,
+  textarea,
+  .form-group:has(input[type="radio"]) {
+    border: 1px solid var(--dark-teal);
+    border-radius: 8px;
+    padding: 0.75em 1.5em;
+  }
+
+  input,
+  textarea {
+    outline-color: green;
+  }
+
+  fieldset {
+    border: 0;
+    padding: 0;
+
+    display: grid;
+    gap: inherit;
+    grid-template-columns: subgrid;
+  }
+
+  legend {
+    margin-bottom: 0.5em;
+  }
+
+  input[type="radio"],
+  input[type="checkbox"] {
+    width: 1.75cap;
+  }
+
+  .form-group:has(input[type="radio"]:checked) {
+    background: var(--pale-green);
+    border-color: var(--green);
+  }
+
+  textarea {
+    box-sizing: content-box;
+    min-block-size: 3lh;
+    resize: block;
+  }
+
+  button {
+    background: var(--green);
+    color: var(--white);
+    border: 0;
+    border-radius: 6px;
+    padding: 0.75em 1.5em;
+
+    &:hover,
+    &:focus-visible {
+      background: var(--dark-teal);
+    }
+  }
+}
