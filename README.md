@@ -4,7 +4,9 @@
 
 ## The tutorial
 
-This repo is for [a video tutorial by Kevin Powell](https://youtu.be/h4dHvo09cG4) taking on [Frontend Mentor's challenge](https://www.frontendmentor.io/challenges/contact-form--G-hYlqKJj?via=kevinpowell) of creating the Bento grid pictured above.
+This repo is for [a video tutorial by Kevin Powell](https://youtu.be/jJgNgNNHqjk) taking on [Frontend Mentor's challenge](https://www.frontendmentor.io/challenges/contact-form--G-hYlqKJj?via=kevinpowell) of creating the form above.
+
+This tutorial only includes the styling of the form. [This follow-up explores the error handling](https://github.com/kevin-powell/fem-contact-form-validation).
 
 ## Following along
 
